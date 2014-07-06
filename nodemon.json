@@ -1,0 +1,8 @@
+{
+    "verbose": true,
+    "ignore": [
+        "test",
+        "node_modules",
+        "client"
+    ]
+}
