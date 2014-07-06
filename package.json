@@ -4,7 +4,8 @@
     "description": "Sample nodejs basis for a web application using express.",
     "main": "index.js",
     "scripts": {
-        "test": "eslint . && mocha test/unit/ --recursive"
+        "test": "eslint . && mocha test/unit/ --recursive",
+        "start": "node index.js"
     },
     "repository": {
         "type": "git",
