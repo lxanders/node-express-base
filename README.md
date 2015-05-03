@@ -44,7 +44,26 @@ npm run dev
 
 This will start the `express` server on [http://localhost:3000](http://localhost:3000).
 
-### The stack
+**5. Update the project information**
+
+Important: The following files should be updated to fit your new project.
+
+* `package.json`: Update fields like
+  * `name`: The project name
+  * `description`: A short description of your project
+  * `version`: The version number for your project
+  * `author`: This can be removed entirely or updated to your preferred name
+  * `license`: Update the type of license you want to use (or use the preconfigured MIT license)
+* `LICENSE`: Update this to fit your needs
+
+**Hints**
+
+* Running the `dev` script will start your server and restart it each time a relevant file changes
+* Run `npm test` and run it often. Once you add code and tests this makes sure that you comply to the code standards and your tests still work
+
+# Additional information
+
+## The stack
 
 The following libraries and tools are used:
 
