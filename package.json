@@ -16,7 +16,8 @@
         "express": "4.4.4"
     },
     "devDependencies": {
-        "eslint": "0.6.2",
+        "eslint": "0.20.0",
+        "eslint-plugin-mocha": "0.2.2",
         "mocha": "1.20.1",
         "chai": "1.9.1",
         "node-dev": "2.6.1"
