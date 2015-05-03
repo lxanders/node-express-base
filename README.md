@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/lxanders/node-express-base.svg?branch=master)](https://travis-ci.org/lxanders/node-express-base)
+
 node-express-base
 =================
 This is a small example which can be used as a starting point on how to get
