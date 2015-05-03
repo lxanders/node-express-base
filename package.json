@@ -3,6 +3,7 @@
     "version": "0.0.1",
     "description": "Sample nodejs basis for a web application using express.",
     "author": "Alexander Schmidt <alexanderschmidt1@gmail.com>",
+    "license": "MIT",
     "main": "index.js",
     "scripts": {
         "clean": "rm -rf node_modules",
