@@ -4,15 +4,13 @@
 
 This aims to be one possible project configuration for a server side rendered web application.
 
-## Technology
-
-### Prerequisites
+## Prerequisites
 
 The recommended platform is `io.js` version `v1.8.1`. 
 
 Additionally the project is currently compatible with `node.js` version `v0.10` or higher. This however may change in the future.
 
-### Getting started
+## Getting started
 
 These steps will get you started and show the most important steps.
 
