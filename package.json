@@ -6,7 +6,7 @@
     "scripts": {
         "clean": "rm -rf node_modules",
         "dev": "node-dev index.js",
-        "test": "eslint . && mocha test/unit/ --recursive"
+        "test": "eslint . && mocha test --recursive"
     },
     "repository": {
         "type": "git",
