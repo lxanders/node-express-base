@@ -21,9 +21,5 @@
         "eslint-plugin-mocha": "0.2.2",
         "mocha": "2.2.4",
         "node-dev": "2.6.1"
-    },
-    "engines": {
-        "node": ">=0.10"
-    },
-    "engineStrict": true
+    }
 }
