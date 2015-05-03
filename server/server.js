@@ -16,7 +16,6 @@ function createServer(expressServer) {
     return expressServer;
 }
 
-
 module.exports = {
     createServer: createServer
 };
