@@ -52,6 +52,7 @@ Important: The following files should be updated to fit your new project.
   * `name`: The project name
   * `description`: A short description of your project
   * `version`: The version number for your project
+  * `repository`: This should point to your project repository
   * `author`: This can be removed entirely or updated to your preferred name
   * `license`: Update the type of license you want to use (or use the preconfigured MIT license)
 * `LICENSE`: Update this to fit your needs
