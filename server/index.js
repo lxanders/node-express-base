@@ -1,9 +1,14 @@
 'use strict';
 
-var app = require('./server'),
+var express = require('express'),
+    Server = require('./server'),
+    server,
+    expressServer = express(),
     port = 3000;
 
-app.listen(port);
+server = Server.createServer(expressServer);
+
+server.listen(port);
 
 /* eslint-disable no-console */
 console.log('Server started on port ' + port);
