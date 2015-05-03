@@ -3,11 +3,6 @@
 module.exports = function (grunt) {
 
     grunt.initConfig({
-
-        clean: {
-            dependencies: ['node_modules']
-        },
-
         nodemon: {
             development: {
                 script: 'index.js',
@@ -21,7 +16,6 @@ module.exports = function (grunt) {
 
     });
 
-    grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-nodemon');
 
     grunt.registerTask('compile', ['clean:build']);

@@ -4,8 +4,9 @@
     "description": "Sample nodejs basis for a web application using express.",
     "main": "index.js",
     "scripts": {
-        "test": "eslint . && mocha test/unit/ --recursive",
-        "start": "grunt server"
+        "clean": "rm -rf node_modules",
+        "start": "grunt server",
+        "test": "eslint . && mocha test/unit/ --recursive"
     },
     "repository": {
         "type": "git",
@@ -20,7 +21,6 @@
         "chai": "1.9.1",
         "nodemon": "1.2.0",
         "grunt": "0.4.5",
-        "grunt-contrib-clean": "0.5.0",
         "grunt-nodemon": "0.2.1"
     },
     "engines": {
