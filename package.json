@@ -6,7 +6,10 @@
     "license": "MIT",
     "main": "server/index.js",
     "scripts": {
-        "clean": "rm -rf node_modules",
+        "build:css": "node-sass assets/css/styles.scss build/assets/css/styles.css",
+        "build:clean": "npm run clean && npm run build",
+        "build": "npm run build:css",
+        "clean": "rm -rf node_modules && rm -rf build",
         "dev": "node-dev server/index.js",
         "test": "eslint . && mocha test --recursive"
     },

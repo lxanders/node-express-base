@@ -7,7 +7,7 @@ var path = require('path'),
 app.set('view engine', 'hbs');
 app.set('views', path.join(process.cwd(), 'templates'));
 
-app.use('/client', express.static(path.join(__dirname, '../client')));
+app.use('/public/assets', express.static(path.join(__dirname, '../build/assets')));
 
 app.get('/', function (req, res) {
     res.render('index');
