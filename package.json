@@ -10,7 +10,7 @@
         "build:clean": "npm run clean && npm run build",
         "build": "npm run build:css",
         "clean": "rm -rf node_modules && rm -rf build",
-        "dev": "node-dev server/index.js",
+        "dev": "npm run build && node-dev server/index.js",
         "test": "eslint . && npm run test:unit && npm run test:functional",
         "test:functional": "mocha --recursive test/functional",
         "test:unit": "mocha --recursive test/unit"
