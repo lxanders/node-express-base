@@ -9,11 +9,15 @@
         "build:css": "node-sass assets/css/styles.scss build/assets/css/styles.css",
         "build:clean": "npm run clean && npm run build",
         "build": "npm run build:css",
+        "check-coverage": "istanbul check-coverage --statement 100 --branch 100 --function 100 --lines 100",
         "clean": "rm -rf node_modules && rm -rf build",
         "dev": "npm run build && node-dev server/index.js",
-        "test": "eslint . && npm run test:unit && npm run test:functional",
+        "lint": "eslint .",
+        "posttest": "npm run check-coverage",
+        "pretest": "npm run lint",
+        "test": "npm run test:unit --coverage && npm run test:functional",
         "test:functional": "mocha --recursive test/functional",
-        "test:unit": "mocha --recursive test/unit"
+        "test:unit": "istanbul test _mocha test/ -- --recursive"
     },
     "repository": {
         "type": "git",
@@ -28,6 +32,7 @@
         "chai": "2.3.0",
         "eslint": "0.20.0",
         "eslint-plugin-mocha": "0.2.2",
+        "istanbul": "0.3.13",
         "mocha": "2.2.4",
         "node-dev": "2.6.1",
         "require-uncached": "1.0.2",
