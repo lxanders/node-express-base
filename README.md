@@ -62,6 +62,7 @@ Important: The following files should be updated to fit your new project.
 
 * Running the `dev` script will start your server and restart it each time a relevant file changes
 * Run `npm test` and run it often. Once you add code and tests this makes sure that you comply to the code standards and your tests still work
+* The project is configured for checking 100% code coverage. While this might seem much it is actually following the simple rule that 100% coverage doesn't prove that everything is tested but everything less to 100% proves that there are untested parts
 
 # Additional information
 
@@ -75,4 +76,5 @@ The following libraries and tools are used:
   * Test-Framework: `Mocha` ([github home](https://github.com/visionmedia/mocha))
   * Assertions: `Chai` ([github home](https://github.com/chaijs/chai))
   * Stubbing etc.: `Sinon.JS` ([github home](https://github.com/cjohansen/Sinon.JS))
+  * Code coverage: `Istanbul` ([github home](https://github.com/gotwarlost/istanbul))
 * `ESLint` for linting ([homepage](http://eslint.org/))
