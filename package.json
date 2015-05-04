@@ -11,7 +11,9 @@
         "build": "npm run build:css",
         "clean": "rm -rf node_modules && rm -rf build",
         "dev": "npm run build && node-dev server/index.js",
-        "test": "eslint . && npm run test:unit && npm run test:functional",
+        "lint": "eslint .",
+        "pretest": "npm run lint",
+        "test": "npm run test:unit && npm run test:functional",
         "test:functional": "mocha --recursive test/functional",
         "test:unit": "mocha --recursive test/unit"
     },
