@@ -1,4 +1,5 @@
-[![Build Status](https://travis-ci.org/lxanders/node-express-base.svg?branch=master)](https://travis-ci.org/lxanders/node-express-base)
+[![Build Status](https://img.shields.io/travis/lxanders/node-express-base/master.svg?style=flat)](https://travis-ci.org/lxanders/node-express-base)
+[![Coverage Status](https://img.shields.io/coveralls/lxanders/node-express-base.svg?style=flat)](https://coveralls.io/r/lxanders/node-express-base)
 
 # node-express-base
 
