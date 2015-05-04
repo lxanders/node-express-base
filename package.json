@@ -32,6 +32,7 @@
         "node-dev": "2.6.1",
         "require-uncached": "1.0.2",
         "sinon": "1.14.1",
-        "sinon-chai": "2.7.0"
+        "sinon-chai": "2.7.0",
+        "supertest": "0.15.0"
     }
 }
