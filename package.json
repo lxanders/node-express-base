@@ -21,7 +21,8 @@
     },
     "dependencies": {
         "hbs": "3.0.1",
-        "express": "4.12.3"
+        "express": "4.12.3",
+        "winston": "1.0.0"
     },
     "devDependencies": {
         "chai": "2.3.0",
@@ -29,6 +30,7 @@
         "eslint-plugin-mocha": "0.2.2",
         "mocha": "2.2.4",
         "node-dev": "2.6.1",
+        "require-uncached": "1.0.2",
         "sinon": "1.14.1",
         "sinon-chai": "2.7.0"
     }

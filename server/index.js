@@ -1,6 +1,7 @@
 'use strict';
 
 var express = require('express'),
+    winston = require('winston'),
     Server = require('./server'),
     server,
     expressServer = express(),
@@ -11,5 +12,5 @@ server = Server.createServer(expressServer);
 server.listen(port);
 
 /* eslint-disable no-console */
-console.log('Server started on port ' + port);
+winston.info('Server started on port ' + port);
 /* eslint-enable no-console */
