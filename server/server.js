@@ -1,16 +1,21 @@
 'use strict';
 
 var path = require('path'),
-    express = require('express'),
-    app = express();
+    express = require('express');
 
-app.set('view engine', 'hbs');
-app.set('views', path.join(process.cwd(), 'templates'));
+function createServer(expressServer) {
+    expressServer.set('view engine', 'hbs');
+    expressServer.set('views', path.join(process.cwd(), 'templates'));
 
-app.use('/public/assets', express.static(path.join(__dirname, '../build/assets')));
+    expressServer.use('/public/assets', express.static(path.join(__dirname, '../build/assets')));
 
-app.get('/', function (req, res) {
-    res.render('index', { title: 'Index page' });
-});
+    expressServer.get('/', function (req, res) {
+        res.render('index', { title: 'Index page' });
+    });
 
-module.exports = app;
+    return expressServer;
+}
+
+module.exports = {
+    createServer: createServer
+};
