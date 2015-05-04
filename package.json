@@ -28,6 +28,8 @@
         "eslint": "0.20.0",
         "eslint-plugin-mocha": "0.2.2",
         "mocha": "2.2.4",
-        "node-dev": "2.6.1"
+        "node-dev": "2.6.1",
+        "sinon": "1.14.1",
+        "sinon-chai": "2.7.0"
     }
 }
