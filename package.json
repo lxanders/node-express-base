@@ -1,6 +1,6 @@
 {
     "name": "node-express-base",
-    "version": "0.0.1",
+    "version": "1.0.0",
     "description": "Sample nodejs basis for a web application using express.",
     "author": "Alexander Schmidt <alexanderschmidt1@gmail.com>",
     "license": "MIT",
