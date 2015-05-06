@@ -8,6 +8,7 @@
     "scripts": {
         "build:css": "node-sass assets/css/styles.scss build/assets/css/styles.css",
         "build:clean": "npm run clean && npm run build",
+        "build:release": "npm pack .",
         "build": "npm run build:css",
         "check-coverage": "istanbul check-coverage --statement 100 --branch 100 --function 100 --lines 100",
         "clean": "rm -rf node_modules && rm -rf build",

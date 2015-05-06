@@ -17,11 +17,14 @@ These steps will get you started and show the most important steps.
 
 **1. Get the project base**
 
-Clone the project from GitHub without taking its history. E.g. using `https`
+There are two ways to fetch the project:
 
-```
-git clone --depth=1 https://github.com/lxanders/node-express-base.git 
-```
+1. Recommended method: Download one of the release packages from the [release page](https://github.com/lxanders/node-express-base/releases) and extract it.
+2. Clone the project from GitHub (which will require a GitHub account). E.g. using `https` you can either
+    * With the full project history:  
+    `git clone https://github.com/lxanders/node-express-base.git`
+    * With a limited number of history items to save space (only one in this example):  
+    `git clone --depth=1 https://github.com/lxanders/node-express-base.git`
 
 **2. Install the dependencies**
 
