@@ -10,7 +10,7 @@
         "build:css:dev": "npm run build:css -- -w --output-style expanded",
         "build:css:production": "npm run build:css -- --output-style compressed",
         "build:clean": "npm run clean && npm run build",
-        "build:release": "npm pack .",
+        "build:package": "npm pack .",
         "build:dev": "npm run build:css:dev",
         "build:production": "npm run build:css:production",
         "check-coverage": "istanbul check-coverage --statement 100 --branch 100 --function 100 --lines 100",
