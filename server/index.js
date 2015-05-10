@@ -11,6 +11,4 @@ server = Server.createServer(expressServer);
 
 server.listen(port);
 
-/* eslint-disable no-console */
 logger.info('Server started on port ' + port);
-/* eslint-enable no-console */
