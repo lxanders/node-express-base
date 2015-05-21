@@ -11,6 +11,7 @@
         "build:css:dev": "npm run build:css -- -w --output-style expanded",
         "build:css:production": "npm run build:css -- --output-style compressed",
         "build:dev": "npm run build:css:dev",
+        "build:docker": "docker build -t node-express-base .",
         "build:package": "npm pack",
         "build:production": "npm run build:css:production",
         "check-coverage": "istanbul check-coverage --statement 100 --branch 100 --function 100 --lines 100",
@@ -20,6 +21,7 @@
         "lint": "eslint .",
         "posttest": "npm run check-coverage",
         "pretest": "npm run lint",
+        "start:docker": "docker run -p 42123:3000 -d node-express-base",
         "test": "npm run test:unit --coverage && npm run test:functional",
         "test:functional": "mocha --recursive test/functional",
         "test:unit": "istanbul test _mocha test/ -- --recursive"
