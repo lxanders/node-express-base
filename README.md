@@ -60,6 +60,7 @@ Important: The following files should be updated to fit your new project.
   * `author`: This can be removed entirely or updated to your preferred name
   * `license`: Update the type of license you want to use (or use the preconfigured MIT license)
 * `LICENSE`: Update this to fit your needs
+* See the [Docker section](#docker) for information about Docker and how to customise it (especially the notes part)
 
 **Hints**
 
@@ -81,3 +82,35 @@ The following libraries and tools are used:
   * Stubbing etc.: `Sinon.JS` ([github home](https://github.com/cjohansen/Sinon.JS))
   * Code coverage: `Istanbul` ([github home](https://github.com/gotwarlost/istanbul))
 * `ESLint` for linting ([homepage](http://eslint.org/))
+
+## <a name="docker">Docker</a>
+
+In the `Dockerfile` your image is described. You can use this image for deployment of your web application.
+
+You can build Docker images of your project by running:
+
+```
+npm run build:docker
+```
+
+This will create an image that can be started using docker on this machine:
+
+```
+npm run start:docker
+```
+
+This will start a container from your image. You can test this container by running:
+
+* When using [`boot2docker`](http://boot2docker.io) (typically on a mac machine): As `boot2docker` requires a virtual machine for running Docker
+  * You need to find out the ip of this virtual machine: `boot2docker ip`
+  * Open up `http://<this ip>:42123`
+* Without it: Open up `http://locahost:42123`
+
+This should show your page. See the [Docker documentation](https://docs.docker.com/) for more information about the capabilities of Docker.
+
+*Notes*
+
+* When running on a classical linux environment: The two scripts `build:docker` and `start:docker` assume that you are able to run `docker` on your terminal without `sudo`
+* The line `EXPOSE 3000` in the `Dockerfile`: This exposes port 3000 of your application (which is used by the server)
+* You might want to change the port mapping: Currently it is configured when the container is started to map port `42123` of your host system to port `3000` of your container
+* You most likely want to change the `build:docker` and `start:docker` scripts to contain the name of your project instead of `node-express-base`
