@@ -27,6 +27,7 @@
         "lint": "eslint .",
         "posttest": "npm run check:coverage",
         "pretest": "npm run lint",
+        "start": "node server/index.js",
         "start:docker": "docker run -p 42123:3000 -d node-express-base",
         "test": "npm run test:unit --coverage && npm run test:functional",
         "test:functional": "mocha --recursive test/functional",

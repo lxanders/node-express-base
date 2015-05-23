@@ -1,0 +1,14 @@
+.dockerignore
+.eslintignore
+.eslintrc
+.git
+.gitignore
+.idea
+.istanbul.yml
+.travis.yml
+Dockerfile
+LICENSE
+README.md
+assets
+node_modules
+test
