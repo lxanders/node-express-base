@@ -1,7 +1,7 @@
 'use strict';
 
 var express = require('express'),
-    logger = require('./system/logger'),
+    logger = require('./system/logger').getLogger(),
     Server = require('./server'),
     server,
     expressServer = express(),
