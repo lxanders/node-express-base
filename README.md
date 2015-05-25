@@ -108,9 +108,13 @@ This will start a container from your image. You can test this container by runn
 
 This should show your page. See the [Docker documentation](https://docs.docker.com/) for more information about the capabilities of Docker.
 
-*Notes*
+***Notes***
 
 * When running on a classical linux environment: The two scripts `build:docker` and `start:docker` assume that you are able to run `docker` on your terminal without `sudo`
 * The line `EXPOSE 3000` in the `Dockerfile`: This exposes port 3000 of your application (which is used by the server)
 * You might want to change the port mapping: Currently it is configured when the container is started to map port `42123` of your host system to port `3000` of your container
 * You most likely want to change the `build:docker` and `start:docker` scripts to contain the name of your project instead of `node-express-base`
+* List of all locally available docker images: `docker images`
+* List of all running docker containers: `docker ps`
+* You can use e.g. the docker container [`nginx-proxy`](https://github.com/jwilder/nginx-proxy) for simple reverse proxying
+* List of all docker containers (running and stopped alike): `docker ps -a`
