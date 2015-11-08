@@ -11,7 +11,7 @@
         "build:assets:copy:img": "cp -r assets/img build/assets/img",
         "build:assets:prepare:directories": "mkdir -p build/assets",
         "build:css": "node-sass assets/css/styles.scss -o build/assets/css",
-        "build:css:dev": "npm run build:css -- -w --output-style expanded",
+        "build:css:dev": "npm run build:css -- --output-style expanded",
         "build:css:production": "npm run build:css -- --output-style compressed",
         "build:dev": "npm run clean:build && npm run build:assets && npm run build:css:dev",
         "build:docker": "npm run build:production && docker build -t node-express-base .",
