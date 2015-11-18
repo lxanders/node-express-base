@@ -32,8 +32,8 @@
         "start": "babel server --out-dir build/server && node build/server/index.js",
         "start:docker": "docker run --restart=always -p 42123:3000 -d node-express-base",
         "test": "npm run test:unit --coverage && npm run test:functional",
-        "test:functional": "mocha --recursive test/functional --compilers js:babel-core/register",
-        "test:unit": "istanbul test _mocha test/ -- --recursive --compilers js:babel-core/register"
+        "test:functional": "mocha test/functional --opts test/functional/mocha.opts",
+        "test:unit": "istanbul test _mocha test/ -- --opts test/unit/mocha.opts"
     },
     "repository": {
         "type": "git",
