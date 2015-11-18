@@ -2,6 +2,10 @@
 
 var logger = require('winston');
 
+function removeLastCharacter(text) {
+    return text.slice(0, -1);
+}
+
 function removeEndingNewLineCharacter(message) {
     var lastCharacter;
 
@@ -9,7 +13,7 @@ function removeEndingNewLineCharacter(message) {
         lastCharacter = message[message.length - 1];
 
         if (lastCharacter === '\n') {
-            return message.slice(0, -1);
+            return removeLastCharacter(message);
         }
     }
 
