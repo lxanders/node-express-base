@@ -8,7 +8,7 @@ chai.use(sinonChai);
 
 describe('Server', function () {
     describe('createServer', function () {
-        var server;
+        let server;
 
         beforeEach(function () {
             server = {
@@ -31,7 +31,7 @@ describe('Server', function () {
         });
 
         it('should register the template directory', function () {
-            var expectedTemplatesPath = path.join(process.cwd(), 'templates');
+            const expectedTemplatesPath = path.join(process.cwd(), 'templates');
 
             Server.createServer(server);
 

@@ -6,11 +6,11 @@ import { createServer } from '../../../server/server';
 import logger from '../../../server/system/logger';
 
 describe('server', function () {
-    var request;
+    let request;
 
     beforeEach(function () {
         sinon.stub(logger, 'getInfoStream').returns({ write: sinon.stub() });
-        
+
         request = supertest(createServer(express()));
     });
 
@@ -24,10 +24,10 @@ describe('server', function () {
     });
 
     it('should respond with html containing the expected title', function (done) {
-        var expectedTitle = '<title>Index page</title>',
-            containsExpectedTitle = function (res) {
-                expect(res.text.indexOf(expectedTitle) !== -1).to.be.true;
-            };
+        const expectedTitle = '<title>Index page</title>';
+        const containsExpectedTitle = function (res) {
+            expect(res.text.indexOf(expectedTitle) !== -1).to.be.true;
+        };
 
         return request.get('/')
             .expect(containsExpectedTitle)

@@ -5,10 +5,8 @@ function removeLastCharacter(text) {
 }
 
 function removeEndingNewLineCharacter(message) {
-    var lastCharacter;
-
     if (message.length > 0) {
-        lastCharacter = message[message.length - 1];
+        const lastCharacter = message[message.length - 1];
 
         if (lastCharacter === '\n') {
             return removeLastCharacter(message);

@@ -8,7 +8,7 @@ chai.use(sinonChai);
 
 describe('logger', function () {
     describe('getInfoStream', function () {
-        var message;
+        let message;
 
         beforeEach(function () {
             sinon.stub(winston, 'info');
@@ -28,7 +28,7 @@ describe('logger', function () {
         });
 
         it('should remove the last character if it is a line break', function () {
-            var expectedMessge = 'any message with line break';
+            const expectedMessge = 'any message with line break';
 
             message = expectedMessge + '\n';
 
@@ -39,7 +39,7 @@ describe('logger', function () {
         });
 
         it('should remove only one line break character from the end', function () {
-            var expectedMessage = 'any message with line break\n';
+            const expectedMessage = 'any message with line break\n';
 
             message = expectedMessage + '\n';
 
