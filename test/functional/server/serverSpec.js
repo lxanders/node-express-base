@@ -1,19 +1,17 @@
-'use strict';
-
-var expect = require('chai').expect,
-    express = require('express'),
-    supertest = require('supertest'),
-    sinon = require('sinon'),
-    logger = require('../../../server/system/logger'),
-    Server = require('../../../server/server');
+import { expect } from 'chai';
+import express from 'express';
+import supertest from 'supertest';
+import sinon from 'sinon';
+import { createServer } from '../../../server/server';
+import logger from '../../../server/system/logger';
 
 describe('server', function () {
     var request;
 
     beforeEach(function () {
         sinon.stub(logger, 'getInfoStream').returns({ write: sinon.stub() });
-
-        request = supertest(Server.createServer(express()));
+        
+        request = supertest(createServer(express()));
     });
 
     afterEach(function () {

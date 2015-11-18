@@ -1,11 +1,9 @@
-'use strict';
+import express from 'express';
+import path from 'path';
+import morgan from 'morgan';
+import logger from './system/logger';
 
-var path = require('path'),
-    express = require('express'),
-    morgan = require('morgan'),
-    logger = require('./system/logger');
-
-function createServer(expressServer) {
+export function createServer(expressServer) {
     expressServer.set('view engine', 'hbs');
     expressServer.set('views', path.join(process.cwd(), 'templates'));
 
@@ -19,6 +17,6 @@ function createServer(expressServer) {
     return expressServer;
 }
 
-module.exports = {
-    createServer: createServer
-};
+export default {
+    createServer
+}

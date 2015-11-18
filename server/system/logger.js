@@ -1,6 +1,4 @@
-'use strict';
-
-var logger = require('winston');
+import logger from 'winston';
 
 function removeLastCharacter(text) {
     return text.slice(0, -1);
@@ -20,7 +18,7 @@ function removeEndingNewLineCharacter(message) {
     return message;
 }
 
-function getInfoStream() {
+export function getInfoStream() {
     return {
         write: function (message) {
             logger.info(removeEndingNewLineCharacter(message));
@@ -28,11 +26,11 @@ function getInfoStream() {
     };
 }
 
-function getLogger() {
+export function getLogger() {
     return logger;
 }
 
-module.exports = {
-    getLogger: getLogger,
-    getInfoStream: getInfoStream
-};
+export default {
+    getInfoStream,
+    getLogger
+}

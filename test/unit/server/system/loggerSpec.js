@@ -1,11 +1,8 @@
-'use strict';
-
-var chai = require('chai'),
-    expect = chai.expect,
-    sinon = require('sinon'),
-    sinonChai = require('sinon-chai'),
-    logger = require('../../../../server/system/logger'),
-    winston = require('winston');
+import chai, { expect } from 'chai';
+import sinon from 'sinon';
+import sinonChai from 'sinon-chai';
+import winston from 'winston';
+import logger from '../../../../server/system/logger';
 
 chai.use(sinonChai);
 

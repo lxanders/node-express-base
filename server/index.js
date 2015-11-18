@@ -1,13 +1,13 @@
-'use strict';
+import express from 'express';
+import { getLogger } from './system/logger';
+import { createServer } from './server';
 
-var express = require('express'),
-    logger = require('./system/logger').getLogger(),
-    Server = require('./server'),
+var logger = getLogger(),
     server,
     expressServer = express(),
     port = 3000;
 
-server = Server.createServer(expressServer);
+server = createServer(expressServer);
 
 server.listen(port);
 
