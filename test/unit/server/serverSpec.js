@@ -6,11 +6,11 @@ import Server from '../../../server/server';
 
 chai.use(sinonChai);
 
-describe('Server', function () {
-    describe('createServer', function () {
+describe('Server', () => {
+    describe('createServer', () => {
         let server;
 
-        beforeEach(function () {
+        beforeEach(() => {
             server = {
                 get: sinon.stub(),
                 set: sinon.stub(),
@@ -18,19 +18,19 @@ describe('Server', function () {
             };
         });
 
-        it('should set the view engine to hbs', function () {
+        it('should set the view engine to hbs', () => {
             Server.createServer(server);
 
             expect(server.set).to.have.been.calledWith('view engine', 'hbs');
         });
 
-        it('should register a static route for assets', function () {
+        it('should register a static route for assets', () => {
             Server.createServer(server);
 
             expect(server.use).to.have.been.calledWith('/public/assets');
         });
 
-        it('should register the template directory', function () {
+        it('should register the template directory', () => {
             const expectedTemplatesPath = path.join(process.cwd(), 'templates');
 
             Server.createServer(server);

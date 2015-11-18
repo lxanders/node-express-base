@@ -18,7 +18,7 @@ function removeEndingNewLineCharacter(message) {
 
 export function getInfoStream() {
     return {
-        write: function (message) {
+        write: (message) => {
             logger.info(removeEndingNewLineCharacter(message));
         }
     };

@@ -10,36 +10,36 @@ var winston = require('winston'),
 
 chai.use(sinonChai);
 
-describe('server', function () {
+describe('server', () => {
     var defaultPort = 3000,
         server;
 
-    beforeEach(function () {
+    beforeEach(() => {
         server = { listen: sinon.stub() };
 
         sinon.stub(Server, 'createServer').returns(server);
         sinon.stub(winston, 'info');
     });
 
-    afterEach(function () {
+    afterEach(() => {
         winston.info.restore();
         Server.createServer.restore();
     });
 
-    it('should create a server', function () {
+    it('should create a server', () => {
         requireUncached('../../../server/index');
 
         expect(Server.createServer).to.have.been.calledOnce;
     });
 
-    it('should start listening on the expected port ' + defaultPort, function () {
+    it('should start listening on the expected port ' + defaultPort, () => {
         requireUncached('../../../server/index');
 
         expect(server.listen).to.have.been.calledOnce;
         expect(server.listen).to.have.been.calledWithExactly(defaultPort);
     });
 
-    it('should log the server status on console', function () {
+    it('should log the server status on console', () => {
         requireUncached('../../../server/index');
 
         expect(winston.info).to.have.been.calledOnce;

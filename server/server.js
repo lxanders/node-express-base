@@ -10,7 +10,7 @@ export function createServer(expressServer) {
     expressServer.use(morgan('combined', { stream: logger.getInfoStream() }));
     expressServer.use('/public/assets', express.static(path.join(__dirname, '../build/assets')));
 
-    expressServer.get('/', function (req, res) {
+    expressServer.get('/', (req, res) => {
         res.render('index', { title: 'Index page' });
     });
 
