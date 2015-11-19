@@ -1,6 +1,6 @@
 export default (router) => {
     router.get('/', (req, res) => {
-        res.render('pages/home', { title: 'Index page', homePageActive: true });
+        res.render('pages/home', { title: 'Home page', homePageActive: true });
     });
 
     router.get('/any-page', (req, res) => {
