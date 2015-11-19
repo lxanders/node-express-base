@@ -32,7 +32,8 @@
         "test": "npm run test:unit:coverage && npm run test:functional",
         "test:functional": "mocha test/functional --opts test/functional/mocha.opts",
         "test:unit": "mocha test/unit --opts test/unit/mocha.opts",
-        "test:unit:coverage": "istanbul cover _mocha test/unit -- --opts test/unit/mocha.opts && istanbul check-coverage"
+        "test:unit:coverage": "istanbul cover _mocha test/unit -- --opts test/unit/mocha.opts && istanbul check-coverage",
+        "test:unit:watch": "npm run test:unit -- --watch --reporter min"
     },
     "repository": {
         "type": "git",
