@@ -10,7 +10,10 @@ export function createServer(expressServer) {
 
     expressServer.use(morgan('combined', { stream: logger.getInfoStream() }));
     expressServer.use('/public/assets', express.static(path.join(__dirname, '../assets')));
+
+    /* eslint-disable new-cap */
     expressServer.use('/', registerRoutes(express.Router()));
+    /* eslint-enable new-cap */
 
     return expressServer;
 }
