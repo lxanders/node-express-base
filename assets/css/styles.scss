@@ -1,0 +1,15 @@
+.page {
+    min-height: 200px;
+}
+
+.home-page {
+    @extend .page;
+
+    background-color: #736B60;
+}
+
+.any-page {
+    @extend .page;
+
+    background-color: #A49694
+}
