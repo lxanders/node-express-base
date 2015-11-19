@@ -80,8 +80,12 @@ The following libraries and tools are used:
   * Test-Framework: `Mocha` ([github home](https://github.com/visionmedia/mocha))
   * Assertions: `Chai` ([github home](https://github.com/chaijs/chai))
   * Stubbing etc.: `Sinon.JS` ([github home](https://github.com/cjohansen/Sinon.JS))
-  * Code coverage: `Istanbul` ([github home](https://github.com/gotwarlost/istanbul))
+  * Code coverage: `isparta` ([github home](https://github.com/douglasduteil/isparta))
 * `ESLint` for linting ([homepage](http://eslint.org/))
+
+## Coverage
+
+The code coverage is analyzed by `isparta` which uses internally `istanbul`. It reads the `.istanbul.yml` configuration file as `istanbul` itself would which is the reason why this configuration is used even without having a direct `istanbul` dependency mentioned in the `package.json` file.
 
 ## <a name="docker">Docker</a>
 

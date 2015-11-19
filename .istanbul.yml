@@ -18,10 +18,3 @@ reporting:
     lines: [99, 100]
     functions: [99, 100]
     branches: [99, 100]
-  check:
-    global:
-      statements: 100
-      lines: 100
-      branches: 100
-      functions: 100
-      excludes: []
