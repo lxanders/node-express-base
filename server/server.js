@@ -19,4 +19,4 @@ export function createServer(expressServer) {
 
 export default {
     createServer
-}
+};

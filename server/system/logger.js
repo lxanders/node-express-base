@@ -31,4 +31,4 @@ export function getLogger() {
 export default {
     getInfoStream,
     getLogger
-}
+};
