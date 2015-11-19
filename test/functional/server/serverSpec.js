@@ -18,30 +18,27 @@ describe('server', () => {
         expect(response.text.indexOf(expectedTitle) !== -1).to.be.true;
     };
 
-    it('should respond with html containing the expected title for the home page', (done) => {
+    it('should respond with html containing the expected title for the home page', () => {
         const expectedTitle = '<title>Home page</title>';
 
         return request.get('/')
             .expect(200)
-            .expect(responseContainsExpectedTitle.bind(null, expectedTitle))
-            .end(done);
+            .expect(responseContainsExpectedTitle.bind(null, expectedTitle));
     });
 
-    it('should respond with html containing the expected title for the any page', (done) => {
+    it('should respond with html containing the expected title for the any page', () => {
         const expectedTitle = '<title>Any page</title>';
 
         return request.get('/any-page')
             .expect(200)
-            .expect(responseContainsExpectedTitle.bind(null, expectedTitle))
-            .end(done);
+            .expect(responseContainsExpectedTitle.bind(null, expectedTitle));
     });
 
-    it('should respond with html containing the expected title for the dropdown page', (done) => {
+    it('should respond with html containing the expected title for the dropdown page', () => {
         const expectedTitle = '<title>Dropdown page</title>';
 
         return request.get('/dropdown-page/any-of-it')
             .expect(200)
-            .expect(responseContainsExpectedTitle.bind(null, expectedTitle))
-            .end(done);
+            .expect(responseContainsExpectedTitle.bind(null, expectedTitle));
     });
 });
