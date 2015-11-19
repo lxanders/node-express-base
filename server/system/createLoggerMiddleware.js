@@ -1,4 +1,4 @@
-import logger from 'winston';
+import morgan from 'morgan';
 
 function removeLastCharacter(text) {
     return text.slice(0, -1);
@@ -16,7 +16,7 @@ function removeEndingNewLineCharacter(message) {
     return message;
 }
 
-export function getInfoStream() {
+function getInfoStream(logger) {
     return {
         write: (message) => {
             logger.info(removeEndingNewLineCharacter(message));
@@ -24,11 +24,6 @@ export function getInfoStream() {
     };
 }
 
-export function getLogger() {
-    return logger;
-}
-
-export default {
-    getInfoStream,
-    getLogger
+export default (logger) => {
+    return morgan('combined', { stream: getInfoStream(logger) });
 };

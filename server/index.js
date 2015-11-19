@@ -1,10 +1,9 @@
 import express from 'express';
-import { getLogger } from './system/logger';
+import logger from 'winston';
 import { createServer } from './server';
 
-const logger = getLogger();
 const expressServer = express();
-const server = createServer(expressServer);
+const server = createServer(expressServer, logger);
 const port = 3000;
 
 server.listen(port);

@@ -3,19 +3,15 @@ import express from 'express';
 import supertest from 'supertest';
 import sinon from 'sinon';
 import { createServer } from '../../../server/server';
-import logger from '../../../server/system/logger';
 
 describe('server', () => {
     let request;
+    let logger;
 
     beforeEach(() => {
-        sinon.stub(logger, 'getInfoStream').returns({ write: sinon.stub() });
+        logger = { info: sinon.spy() };
 
-        request = supertest(createServer(express()));
-    });
-
-    afterEach(() => {
-        logger.getInfoStream.restore();
+        request = supertest(createServer(express(), logger));
     });
 
     const responseContainsExpectedTitle = (expectedTitle, response) => {

@@ -1,14 +1,13 @@
 import express from 'express';
 import path from 'path';
-import morgan from 'morgan';
-import logger from './system/logger';
+import createLoggerMiddleware from './system/createLoggerMiddleware';
 import registerRoutes from './registerRoutes';
 
-export function createServer(expressServer) {
+export function createServer(expressServer, logger) {
     expressServer.set('view engine', 'hbs');
     expressServer.set('views', path.join(process.cwd(), 'templates'));
 
-    expressServer.use(morgan('combined', { stream: logger.getInfoStream() }));
+    expressServer.use(createLoggerMiddleware(logger));
     expressServer.use('/public/assets', express.static(path.join(__dirname, '../assets')));
 
     /* eslint-disable new-cap */
