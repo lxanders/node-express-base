@@ -7,9 +7,7 @@ This aims to be one possible project configuration for a server side rendered we
 
 ## Prerequisites
 
-The recommended platform is `io.js` version `v1.8.1`. 
-
-Additionally the project is currently compatible with `node.js` version `v0.10` or higher. This however may change in the future.
+The project is currently tested on the [Travis CI](https://travis-ci.org/lxanders/node-express-base) with [`Node.js`](https://nodejs.org) versions `4.0.0` & `5.0.0`.
 
 ## Getting started
 
@@ -80,8 +78,12 @@ The following libraries and tools are used:
   * Test-Framework: `Mocha` ([github home](https://github.com/visionmedia/mocha))
   * Assertions: `Chai` ([github home](https://github.com/chaijs/chai))
   * Stubbing etc.: `Sinon.JS` ([github home](https://github.com/cjohansen/Sinon.JS))
-  * Code coverage: `Istanbul` ([github home](https://github.com/gotwarlost/istanbul))
+  * Code coverage: `isparta` ([github home](https://github.com/douglasduteil/isparta))
 * `ESLint` for linting ([homepage](http://eslint.org/))
+
+## Coverage
+
+The code coverage is analyzed by `isparta` which uses internally `istanbul`. It reads the `.istanbul.yml` configuration file as `istanbul` itself would which is the reason why this configuration is used even without having a direct `istanbul` dependency mentioned in the `package.json` file.
 
 ## <a name="docker">Docker</a>
 

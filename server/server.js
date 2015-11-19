@@ -1,24 +1,22 @@
-'use strict';
+import express from 'express';
+import path from 'path';
+import morgan from 'morgan';
+import logger from './system/logger';
 
-var path = require('path'),
-    express = require('express'),
-    morgan = require('morgan'),
-    logger = require('./system/logger');
-
-function createServer(expressServer) {
+export function createServer(expressServer) {
     expressServer.set('view engine', 'hbs');
     expressServer.set('views', path.join(process.cwd(), 'templates'));
 
     expressServer.use(morgan('combined', { stream: logger.getInfoStream() }));
-    expressServer.use('/public/assets', express.static(path.join(__dirname, '../build/assets')));
+    expressServer.use('/public/assets', express.static(path.join(__dirname, '../assets')));
 
-    expressServer.get('/', function (req, res) {
+    expressServer.get('/', (req, res) => {
         res.render('index', { title: 'Index page' });
     });
 
     return expressServer;
 }
 
-module.exports = {
-    createServer: createServer
+export default {
+    createServer
 };
