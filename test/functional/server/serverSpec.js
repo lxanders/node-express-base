@@ -18,19 +18,34 @@ describe('server', () => {
         logger.getInfoStream.restore();
     });
 
-    it('should return with status code 200', (done) => {
+    const responseContainsExpectedTitle = (expectedTitle, response) => {
+        expect(response.text.indexOf(expectedTitle) !== -1).to.be.true;
+    };
+
+    it('should respond with html containing the expected title for the home page', (done) => {
+        const expectedTitle = '<title>Home page</title>';
+
         return request.get('/')
-            .expect(200, done);
+            .expect(200)
+            .expect(responseContainsExpectedTitle.bind(null, expectedTitle))
+            .end(done);
     });
 
-    it('should respond with html containing the expected title', (done) => {
-        const expectedTitle = '<title>Index page</title>';
-        const containsExpectedTitle = (res) => {
-            expect(res.text.indexOf(expectedTitle) !== -1).to.be.true;
-        };
+    it('should respond with html containing the expected title for the any page', (done) => {
+        const expectedTitle = '<title>Any page</title>';
 
-        return request.get('/')
-            .expect(containsExpectedTitle)
+        return request.get('/any-page')
+            .expect(200)
+            .expect(responseContainsExpectedTitle.bind(null, expectedTitle))
+            .end(done);
+    });
+
+    it('should respond with html containing the expected title for the dropdown page', (done) => {
+        const expectedTitle = '<title>Dropdown page</title>';
+
+        return request.get('/dropdown-page/any-of-it')
+            .expect(200)
+            .expect(responseContainsExpectedTitle.bind(null, expectedTitle))
             .end(done);
     });
 });

@@ -5,7 +5,7 @@
     <title>{{title}}</title>
     <link rel="icon" type="image/ico" href="public/assets/img/favicon.ico"/>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-    <link rel="stylesheet" href="public/assets/css/styles.css">
+    <link rel="stylesheet" href="/public/assets/css/styles.css">
 </head>
 
 <body>
@@ -14,29 +14,29 @@
     <nav class="navbar navbar-default">
         <div class="container">
             <div class="navbar-header">
-                <a class="navbar-brand" href="#">Home</a>
+                <a class="navbar-brand" href="/">Home brand</a>
             </div>
 
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                    <li class="active"><a href="#">Any link</a></li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
-                        <ul class="dropdown-menu" role="menu">
-                            <li><a href="#">Action</a></li>
-                            <li><a href="#">Another action</a></li>
-                            <li><a href="#">Something else here</a></li>
-                            <li class="divider"></li>
-                            <li><a href="#">Separated link</a></li>
-                            <li class="divider"></li>
-                            <li><a href="#">One more separated link</a></li>
-                        </ul>
-                    </li>
-                </ul>
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="https://github.com/lxanders/node-express-base">node-express-base on GitHub</a></li>
-                </ul>
-            </div>
+            <ul class="nav navbar-nav">
+                <li class="{{#if homePageActive}}active{{/if}}"><a href="/">Home link</a></li>
+                <li class="{{#if anyPageActive}}active{{/if}}"><a href="/any-page">Any page</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="/dropdown-page/action">Action</a></li>
+                        <li><a href="/dropdown-page/another-action">Another action</a></li>
+                        <li><a href="/dropdown-page/something-else">Something else here</a></li>
+                        <li class="divider"></li>
+                        <li><a href="/dropdown-page/separated-link">Separated link</a></li>
+                        <li class="divider"></li>
+                        <li><a href="/dropdown-page/another-separated-link">One more separated link</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="https://github.com/lxanders/node-express-base">node-express-base on GitHub</a></li>
+            </ul>
         </div>
     </nav>
 </header>
