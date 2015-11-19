@@ -8,7 +8,7 @@ export function createServer(expressServer) {
     expressServer.set('views', path.join(process.cwd(), 'templates'));
 
     expressServer.use(morgan('combined', { stream: logger.getInfoStream() }));
-    expressServer.use('/public/assets', express.static(path.join(__dirname, '../build/assets')));
+    expressServer.use('/public/assets', express.static(path.join(__dirname, '../assets')));
 
     expressServer.get('/', (req, res) => {
         res.render('index', { title: 'Index page' });
