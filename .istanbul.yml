@@ -6,6 +6,7 @@ instrumentation:
     - 'assets/**'
     - 'build/**'
     - 'templates/**'
+    - 'server/registerRoutes.js'
   embed-source: false
   complete-copy: false
 reporting:
