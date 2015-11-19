@@ -36,5 +36,4 @@ describe('createServer', () => {
 
         expect(serverInstance.set).to.have.been.calledWith('views', expectedTemplatesPath);
     });
-
 });
