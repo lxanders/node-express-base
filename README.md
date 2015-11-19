@@ -13,7 +13,7 @@ The project is currently tested on the [Travis CI](https://travis-ci.org/lxander
 
 These steps will get you started and show the most important steps.
 
-**1. Get the project base**
+### Get the project base
 
 There are two ways to fetch the project:
 
@@ -24,13 +24,13 @@ There are two ways to fetch the project:
     `git clone --depth=1 https://github.com/lxanders/node-express-base.git`
 2. Download one of the release packages from the [release page](https://github.com/lxanders/node-express-base/releases) and extract it.
 
-**2. Install the dependencies**
+### Install the dependencies**
 
 ```
 npm install
 ```
 
-**3. Make sure your project base is fine**
+### Make sure your project base is fine
 
 ```
 npm test
@@ -38,7 +38,7 @@ npm test
 
 This will check for linting errors and will recursively execute all tests in `test/`.
 
-**4. Start the project in watcher mode**
+### Start the project in watcher mode
 
 ```
 npm run dev
@@ -46,7 +46,7 @@ npm run dev
 
 This will start the `express` server on [http://localhost:3000](http://localhost:3000).
 
-**5. Update the project information**
+### Update the project information
 
 Important: The following files should be updated to fit your new project.
 
