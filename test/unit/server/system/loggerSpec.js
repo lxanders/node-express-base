@@ -28,20 +28,20 @@ describe('logger', () => {
         });
 
         it('should remove the last character if it is a line break', () => {
-            const expectedMessge = 'any message with line break';
+            const expectedMessage = 'any message with line break';
 
-            message = expectedMessge + '\n';
+            message = `${expectedMessage}\n`;
 
             logger.getInfoStream().write(message);
 
             expect(winston.info).to.have.been.calledOnce;
-            expect(winston.info).to.have.been.calledWithExactly(expectedMessge);
+            expect(winston.info).to.have.been.calledWithExactly(expectedMessage);
         });
 
         it('should remove only one line break character from the end', () => {
             const expectedMessage = 'any message with line break\n';
 
-            message = expectedMessage + '\n';
+            message = `${expectedMessage}\n`;
 
             logger.getInfoStream().write(message);
 

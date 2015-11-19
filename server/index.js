@@ -9,4 +9,4 @@ const port = 3000;
 
 server.listen(port);
 
-logger.info('Server started on port ' + port);
+logger.info(`Server started on port ${port}`);
