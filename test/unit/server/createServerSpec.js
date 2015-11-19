@@ -2,7 +2,7 @@ import path from 'path';
 import chai, { expect } from 'chai';
 import sinon from 'sinon';
 import sinonChai from 'sinon-chai';
-import createServer from '../../../serverInstance/createServer';
+import createServer from '../../../server/createServer';
 
 chai.use(sinonChai);
 
@@ -11,9 +11,9 @@ describe('createServer', () => {
 
     beforeEach(() => {
         serverInstance = {
-            get: sinon.stub(),
-            set: sinon.stub(),
-            use: sinon.stub()
+            get: sinon.spy(),
+            set: sinon.spy(),
+            use: sinon.spy()
         };
     });
 
