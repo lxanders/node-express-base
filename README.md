@@ -7,9 +7,7 @@ This aims to be one possible project configuration for a server side rendered we
 
 ## Prerequisites
 
-The recommended platform is `io.js` version `v1.8.1`. 
-
-Additionally the project is currently compatible with `node.js` version `v0.10` or higher. This however may change in the future.
+The project is currently tested on the [Travis CI](https://travis-ci.org/lxanders/node-express-base) with [`Node.js`](https://nodejs.org) versions `4.0.0` & `5.0.0`.
 
 ## Getting started
 
