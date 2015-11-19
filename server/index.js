@@ -1,6 +1,6 @@
 import express from 'express';
 import logger from 'winston';
-import { createServer } from './server';
+import createServer from './createServer';
 
 const expressServer = express();
 const server = createServer(expressServer, logger);

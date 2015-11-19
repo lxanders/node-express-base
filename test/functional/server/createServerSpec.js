@@ -2,9 +2,9 @@ import { expect } from 'chai';
 import express from 'express';
 import supertest from 'supertest';
 import sinon from 'sinon';
-import { createServer } from '../../../server/server';
+import createServer from '../../../server/createServer';
 
-describe('server', () => {
+describe('createServer', () => {
     let request;
     let logger;
 

@@ -3,7 +3,7 @@ import path from 'path';
 import createLoggerMiddleware from './system/createLoggerMiddleware';
 import registerRoutes from './registerRoutes';
 
-export function createServer(expressServer, logger) {
+export default (expressServer, logger) => {
     expressServer.set('view engine', 'hbs');
     expressServer.set('views', path.join(process.cwd(), 'templates'));
 
@@ -15,8 +15,4 @@ export function createServer(expressServer, logger) {
     /* eslint-enable new-cap */
 
     return expressServer;
-}
-
-export default {
-    createServer
 };
