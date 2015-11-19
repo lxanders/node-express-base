@@ -13,7 +13,7 @@ The project is currently tested on the [Travis CI](https://travis-ci.org/lxander
 
 These steps will get you started and show the most important steps.
 
-**1. Get the project base**
+### Get the project base
 
 There are two ways to fetch the project:
 
@@ -24,13 +24,13 @@ There are two ways to fetch the project:
     `git clone --depth=1 https://github.com/lxanders/node-express-base.git`
 2. Download one of the release packages from the [release page](https://github.com/lxanders/node-express-base/releases) and extract it.
 
-**2. Install the dependencies**
+### Install the dependencies**
 
 ```
 npm install
 ```
 
-**3. Make sure your project base is fine**
+### Make sure your project base is fine
 
 ```
 npm test
@@ -38,7 +38,7 @@ npm test
 
 This will check for linting errors and will recursively execute all tests in `test/`.
 
-**4. Start the project in watcher mode**
+### Start the project in watcher mode
 
 ```
 npm run dev
@@ -46,7 +46,7 @@ npm run dev
 
 This will start the `express` server on [http://localhost:3000](http://localhost:3000).
 
-**5. Update the project information**
+### Update the project information
 
 Important: The following files should be updated to fit your new project.
 
@@ -63,8 +63,9 @@ Important: The following files should be updated to fit your new project.
 **Hints**
 
 * Running the `dev` script will start your server and restart it each time a relevant file changes
+* Running the `test:unit:watch` script runs the unit tests with a watcher and uses a minimal reporter. This helps focussing on the relevant tests and is as such ideal for TDD (Test Driven Development)
 * Run `npm test` and run it often. Once you add code and tests this makes sure that you comply to the code standards and your tests still work
-* The project is configured for checking 100% code coverage. While this might seem much it is actually following the simple rule that 100% coverage doesn't prove that everything is tested but everything less to 100% proves that there are untested parts
+* The project is configured to check for 100% code coverage. While this might seem much it is actually following the simple rule that 100% coverage doesn't prove that everything is tested but having less then 100% proves that there are untested parts. Don't take this dogmatic however: There are situations and parts in code that are not meant to be unit tested. Pure wiring code as in the `server/index.js` file is an example for this. While it is technically possible to unit test this code, it is often only possible by repeating the implementation and stubbing too much. In these cases it is totally valid to disable files or some branches. But first think about the reason why testing this part of the code is so hard. Often the reason is that the software design is not ideal and might be improvable (e.g. by using dependency injection to solve dependencies). Having a check for 100% that bails for values below can help you remind you to think about these points
 
 # Additional information
 
