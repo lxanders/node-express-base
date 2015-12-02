@@ -5,6 +5,8 @@
 
 This aims to be one possible project configuration for a server side rendered web application.
 
+Note: This project is completely rewritten to use ES6 / ES2015 in its most recent version.
+
 ## Prerequisites
 
 The project is currently tested on the [Travis CI](https://travis-ci.org/lxanders/node-express-base) with [`Node.js`](https://nodejs.org) versions `4.0.0` & `5.0.0`.
