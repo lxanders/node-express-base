@@ -24,7 +24,7 @@ There are two ways to fetch the project:
     `git clone --depth=1 https://github.com/lxanders/node-express-base.git`
 2. Download one of the release packages from the [release page](https://github.com/lxanders/node-express-base/releases) and extract it.
 
-### Install the dependencies**
+### Install the dependencies
 
 ```
 npm install
