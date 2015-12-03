@@ -5,6 +5,8 @@
 
 This aims to be one possible project configuration for a server side rendered web application.
 
+Note: This project is completely rewritten to use ES6 / ES2015 in its most recent version.
+
 ## Prerequisites
 
 The project is currently tested on the [Travis CI](https://travis-ci.org/lxanders/node-express-base) with [`Node.js`](https://nodejs.org) versions `4.0.0` & `5.0.0`.
@@ -24,7 +26,7 @@ There are two ways to fetch the project:
     `git clone --depth=1 https://github.com/lxanders/node-express-base.git`
 2. Download one of the release packages from the [release page](https://github.com/lxanders/node-express-base/releases) and extract it.
 
-### Install the dependencies**
+### Install the dependencies
 
 ```
 npm install
